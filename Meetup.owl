@@ -1,0 +1,840 @@
+Prefix(:=<http://www.iiitd.ac.in/meetups#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.iiitd.ac.in/meetups>
+<http://www.iiitd.ac.in/meetups>
+
+Declaration(Class(:Agent))
+Declaration(Class(:AgentRole))
+Declaration(Class(:Animals))
+Declaration(Class(:Arts))
+Declaration(Class(:AutoMobiles))
+Declaration(Class(:BookClub))
+Declaration(Class(:Business))
+Declaration(Class(:Categories))
+Declaration(Class(:City))
+Declaration(Class(:Community))
+Declaration(Class(:Crafts))
+Declaration(Class(:Dance))
+Declaration(Class(:Education))
+Declaration(Class(:Event))
+Declaration(Class(:FItness))
+Declaration(Class(:Family))
+Declaration(Class(:Fashion))
+Declaration(Class(:Fee))
+Declaration(Class(:Films))
+Declaration(Class(:Games))
+Declaration(Class(:Group))
+Declaration(Class(:GroupPhoto))
+Declaration(Class(:Health))
+Declaration(Class(:LGBT))
+Declaration(Class(:LIfestyle))
+Declaration(Class(:Language))
+Declaration(Class(:Members))
+Declaration(Class(:Movements))
+Declaration(Class(:Music))
+Declaration(Class(:Organiser))
+Declaration(Class(:Organizing))
+Declaration(Class(:Outdoors))
+Declaration(Class(:Pets))
+Declaration(Class(:Photography))
+Declaration(Class(:Rating))
+Declaration(Class(:Recreation))
+Declaration(Class(:Singles))
+Declaration(Class(:Sports))
+Declaration(Class(:Support))
+Declaration(Class(:Technology))
+Declaration(Class(:Topic))
+Declaration(Class(:Venue))
+Declaration(Class(:WellBeing))
+Declaration(Class(:Writing))
+Declaration(Class(<http://www.iiitd.ac.in/meetups#Food&Drink>))
+Declaration(Class(<http://www.iiitd.ac.in/meetups#Moms&Dads>))
+Declaration(Class(<http://www.iiitd.ac.in/meetups#SciFi&Fantasy>))
+Declaration(ObjectProperty(:hasCategory))
+Declaration(ObjectProperty(:hasFees))
+Declaration(ObjectProperty(:hasGroup))
+Declaration(ObjectProperty(:hasGroupPhoto))
+Declaration(ObjectProperty(:hasNormalizedRating))
+Declaration(ObjectProperty(:hasOrganizer))
+Declaration(ObjectProperty(:hasPhoto))
+Declaration(ObjectProperty(:hasRating))
+Declaration(ObjectProperty(:hasTopic))
+Declaration(ObjectProperty(:hasVenue))
+Declaration(ObjectProperty(:inCity))
+Declaration(ObjectProperty(:performedBy))
+Declaration(ObjectProperty(:providedBy))
+Declaration(DataProperty(:accepts))
+Declaration(DataProperty(:createdOn))
+Declaration(DataProperty(:happensOn))
+Declaration(DataProperty(:hasAddress))
+Declaration(DataProperty(:hasAddress1))
+Declaration(DataProperty(:hasAddress2))
+Declaration(DataProperty(:hasAmount))
+Declaration(DataProperty(:hasAverage))
+Declaration(DataProperty(:hasBio))
+Declaration(DataProperty(:hasCategoryID))
+Declaration(DataProperty(:hasCityID))
+Declaration(DataProperty(:hasCount))
+Declaration(DataProperty(:hasCountry))
+Declaration(DataProperty(:hasCurrency))
+Declaration(DataProperty(:hasDescription))
+Declaration(DataProperty(:hasDistance))
+Declaration(DataProperty(:hasDuration))
+Declaration(DataProperty(:hasGroupID))
+Declaration(DataProperty(:hasHighResLink))
+Declaration(DataProperty(:hasHomeTown))
+Declaration(DataProperty(:hasID))
+Declaration(DataProperty(:hasJoinMode))
+Declaration(DataProperty(:hasLabel))
+Declaration(DataProperty(:hasLatitude))
+Declaration(DataProperty(:hasLink))
+Declaration(DataProperty(:hasLongitude))
+Declaration(DataProperty(:hasMainTopicID))
+Declaration(DataProperty(:hasMaybeRSVPCount))
+Declaration(DataProperty(:hasMemberCount))
+Declaration(DataProperty(:hasMemberID))
+Declaration(DataProperty(:hasName))
+Declaration(DataProperty(:hasPhoneNo))
+Declaration(DataProperty(:hasPhotoID))
+Declaration(DataProperty(:hasPhotoLink))
+Declaration(DataProperty(:hasPhotoURL))
+Declaration(DataProperty(:hasRSVPCount))
+Declaration(DataProperty(:hasRSVPLimit))
+Declaration(DataProperty(:hasRanking))
+Declaration(DataProperty(:hasStatus))
+Declaration(DataProperty(:hasThumbLink))
+Declaration(DataProperty(:hasTimeZone))
+Declaration(DataProperty(:hasType))
+Declaration(DataProperty(:hasURL))
+Declaration(DataProperty(:hasURLName))
+Declaration(DataProperty(:hasUTCOffset))
+Declaration(DataProperty(:hasVisibility))
+Declaration(DataProperty(:hasYESRSVPCount))
+Declaration(DataProperty(:hasZipCode))
+Declaration(DataProperty(:howToFindUs))
+Declaration(DataProperty(:inState))
+Declaration(DataProperty(:isRepinned))
+Declaration(DataProperty(:isRequired))
+Declaration(DataProperty(:isUpdatedTo))
+Declaration(DataProperty(:joinedOn))
+Declaration(DataProperty(:visitedOn))
+Declaration(DataProperty(:whoCallsMemberHeadcount))
+Declaration(DataProperty(:whyHappenning))
+############################
+#   Object Properties
+############################
+
+# Object Property: :hasCategory (:hasCategory)
+
+ObjectPropertyDomain(:hasCategory :Group)
+ObjectPropertyRange(:hasCategory :Categories)
+ObjectPropertyRange(:hasCategory ObjectSomeValuesFrom(:hasCategory :Categories))
+
+# Object Property: :hasFees (:hasFees)
+
+ObjectPropertyDomain(:hasFees :Event)
+ObjectPropertyRange(:hasFees :Fee)
+ObjectPropertyRange(:hasFees ObjectExactCardinality(1 :hasFees :Fee))
+
+# Object Property: :hasGroup (:hasGroup)
+
+ObjectPropertyDomain(:hasGroup :Event)
+ObjectPropertyRange(:hasGroup :Group)
+ObjectPropertyRange(:hasGroup ObjectExactCardinality(1 :hasGroup :Group))
+
+# Object Property: :hasGroupPhoto (:hasGroupPhoto)
+
+ObjectPropertyDomain(:hasGroupPhoto :Group)
+ObjectPropertyRange(:hasGroupPhoto :GroupPhoto)
+ObjectPropertyRange(:hasGroupPhoto ObjectSomeValuesFrom(:hasGroupPhoto :GroupPhoto))
+
+# Object Property: :hasNormalizedRating (:hasNormalizedRating)
+
+SubObjectPropertyOf(:hasNormalizedRating :hasRating)
+ObjectPropertyDomain(:hasNormalizedRating :Venue)
+ObjectPropertyRange(:hasNormalizedRating :Rating)
+ObjectPropertyRange(:hasNormalizedRating ObjectSomeValuesFrom(:hasNormalizedRating :Rating))
+
+# Object Property: :hasOrganizer (:hasOrganizer)
+
+ObjectPropertyDomain(:hasOrganizer :Group)
+ObjectPropertyRange(:hasOrganizer ObjectSomeValuesFrom(:hasOrganizer :Organiser))
+
+# Object Property: :hasPhoto (:hasPhoto)
+
+SubObjectPropertyOf(:hasPhoto :hasGroupPhoto)
+ObjectPropertyDomain(:hasPhoto :Organiser)
+ObjectPropertyRange(:hasPhoto :GroupPhoto)
+
+# Object Property: :hasRating (:hasRating)
+
+ObjectPropertyDomain(:hasRating :Event)
+ObjectPropertyDomain(:hasRating :Group)
+ObjectPropertyDomain(:hasRating :Venue)
+ObjectPropertyRange(:hasRating :Rating)
+ObjectPropertyRange(:hasRating ObjectExactCardinality(1 :hasRating :Rating))
+
+# Object Property: :hasTopic (:hasTopic)
+
+ObjectPropertyDomain(:hasTopic :Group)
+ObjectPropertyDomain(:hasTopic :Members)
+ObjectPropertyRange(:hasTopic :Topic)
+ObjectPropertyRange(:hasTopic ObjectSomeValuesFrom(:hasTopic :Topic))
+
+# Object Property: :hasVenue (:hasVenue)
+
+SubObjectPropertyOf(:hasVenue owl:topObjectProperty)
+ObjectPropertyDomain(:hasVenue :Event)
+ObjectPropertyRange(:hasVenue :Venue)
+ObjectPropertyRange(:hasVenue ObjectExactCardinality(1 :hasVenue :Venue))
+
+# Object Property: :inCity (:inCity)
+
+ObjectPropertyDomain(:inCity :Group)
+ObjectPropertyDomain(:inCity :Members)
+ObjectPropertyDomain(:inCity :Venue)
+ObjectPropertyRange(:inCity :City)
+ObjectPropertyRange(:inCity ObjectSomeValuesFrom(:inCity :City))
+
+# Object Property: :performedBy (:performedBy)
+
+SubObjectPropertyOf(:performedBy owl:topObjectProperty)
+ObjectPropertyDomain(:performedBy :AgentRole)
+ObjectPropertyRange(:performedBy :Agent)
+
+# Object Property: :providedBy (:providedBy)
+
+ObjectPropertyDomain(:providedBy :AgentRole)
+ObjectPropertyRange(:providedBy :Event)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: :accepts (:accepts)
+
+DataPropertyDomain(:accepts :Fee)
+DataPropertyRange(:accepts rdfs:Literal)
+
+# Data Property: :createdOn (:createdOn)
+
+DataPropertyDomain(:createdOn :Event)
+DataPropertyDomain(:createdOn :Group)
+DataPropertyRange(:createdOn xsd:dateTime)
+
+# Data Property: :happensOn (:happensOn)
+
+DataPropertyDomain(:happensOn :Event)
+DataPropertyRange(:happensOn xsd:dateTime)
+
+# Data Property: :hasAddress (:hasAddress)
+
+DataPropertyDomain(:hasAddress :Venue)
+DataPropertyRange(:hasAddress rdfs:Literal)
+
+# Data Property: :hasAddress1 (:hasAddress1)
+
+SubDataPropertyOf(:hasAddress1 :hasAddress)
+
+# Data Property: :hasAddress2 (:hasAddress2)
+
+SubDataPropertyOf(:hasAddress2 :hasAddress)
+
+# Data Property: :hasAmount (:hasAmount)
+
+DataPropertyDomain(:hasAmount :Fee)
+DataPropertyRange(:hasAmount xsd:double)
+
+# Data Property: :hasAverage (:hasAverage)
+
+DataPropertyDomain(:hasAverage :Rating)
+DataPropertyRange(:hasAverage xsd:float)
+
+# Data Property: :hasBio (:hasBio)
+
+SubDataPropertyOf(:hasBio :hasDescription)
+DataPropertyDomain(:hasBio :Members)
+DataPropertyRange(:hasBio rdfs:Literal)
+
+# Data Property: :hasCategoryID (:hasCategoryID)
+
+SubDataPropertyOf(:hasCategoryID :hasID)
+DataPropertyDomain(:hasCategoryID :Group)
+DataPropertyRange(:hasCategoryID xsd:long)
+
+# Data Property: :hasCityID (:hasCityID)
+
+SubDataPropertyOf(:hasCityID :hasID)
+DataPropertyDomain(:hasCityID :Group)
+DataPropertyRange(:hasCityID xsd:long)
+
+# Data Property: :hasCount (:hasCount)
+
+FunctionalDataProperty(:hasCount)
+DataPropertyDomain(:hasCount :Rating)
+DataPropertyRange(:hasCount xsd:integer)
+DataPropertyRange(:hasCount DataOneOf("-1"^^xsd:integer))
+
+# Data Property: :hasCountry (:hasCountry)
+
+DataPropertyDomain(:hasCountry :City)
+DataPropertyDomain(:hasCountry :Group)
+DataPropertyDomain(:hasCountry :Members)
+DataPropertyDomain(:hasCountry :Venue)
+DataPropertyRange(:hasCountry rdfs:Literal)
+
+# Data Property: :hasCurrency (:hasCurrency)
+
+DataPropertyDomain(:hasCurrency :Fee)
+DataPropertyRange(:hasCurrency rdfs:Literal)
+
+# Data Property: :hasDescription (:hasDescription)
+
+DataPropertyDomain(:hasDescription :Event)
+DataPropertyDomain(:hasDescription :Fee)
+DataPropertyDomain(:hasDescription :Group)
+DataPropertyDomain(:hasDescription :Topic)
+DataPropertyRange(:hasDescription xsd:string)
+
+# Data Property: :hasDistance (:hasDistance)
+
+DataPropertyDomain(:hasDistance :City)
+DataPropertyRange(:hasDistance xsd:double)
+
+# Data Property: :hasDuration (:hasDuration)
+
+DataPropertyDomain(:hasDuration :Event)
+DataPropertyRange(:hasDuration xsd:unsignedLong)
+
+# Data Property: :hasGroupID (:hasGroupID)
+
+SubDataPropertyOf(:hasGroupID :hasID)
+DataPropertyDomain(:hasGroupID :Members)
+DataPropertyRange(:hasGroupID xsd:long)
+
+# Data Property: :hasHighResLink (:hasHighResLink)
+
+SubDataPropertyOf(:hasHighResLink :hasLink)
+
+# Data Property: :hasHomeTown (:hasHomeTown)
+
+DataPropertyDomain(:hasHomeTown :Members)
+DataPropertyRange(:hasHomeTown rdfs:Literal)
+
+# Data Property: :hasID (:hasID)
+
+DataPropertyDomain(:hasID :Categories)
+DataPropertyDomain(:hasID :City)
+DataPropertyDomain(:hasID :Event)
+DataPropertyDomain(:hasID :Group)
+DataPropertyDomain(:hasID :Members)
+DataPropertyDomain(:hasID :Organiser)
+DataPropertyDomain(:hasID :Topic)
+DataPropertyDomain(:hasID :Venue)
+DataPropertyRange(:hasID xsd:long)
+
+# Data Property: :hasJoinMode (:hasJoinMode)
+
+DataPropertyDomain(:hasJoinMode :Group)
+DataPropertyRange(:hasJoinMode rdfs:Literal)
+
+# Data Property: :hasLabel (:hasLabel)
+
+DataPropertyDomain(:hasLabel :Fee)
+DataPropertyRange(:hasLabel rdfs:Literal)
+
+# Data Property: :hasLatitude (:hasLatitude)
+
+DataPropertyDomain(:hasLatitude :City)
+DataPropertyDomain(:hasLatitude :Group)
+DataPropertyRange(:hasLatitude xsd:double)
+
+# Data Property: :hasLink (:hasLink)
+
+DataPropertyDomain(:hasLink :GroupPhoto)
+DataPropertyRange(:hasLink xsd:anyURI)
+
+# Data Property: :hasLongitude (:hasLongitude)
+
+DataPropertyDomain(:hasLongitude :City)
+DataPropertyDomain(:hasLongitude :Group)
+DataPropertyRange(:hasLongitude xsd:double)
+
+# Data Property: :hasMainTopicID (:hasMainTopicID)
+
+SubDataPropertyOf(:hasMainTopicID :hasID)
+DataPropertyDomain(:hasMainTopicID :Topic)
+DataPropertyRange(:hasMainTopicID xsd:long)
+
+# Data Property: :hasMaybeRSVPCount (:hasMaybeRSVPCount)
+
+SubDataPropertyOf(:hasMaybeRSVPCount :hasRSVPCount)
+DataPropertyDomain(:hasMaybeRSVPCount :Event)
+DataPropertyRange(:hasMaybeRSVPCount xsd:integer)
+
+# Data Property: :hasMemberCount (:hasMemberCount)
+
+SubDataPropertyOf(:hasMemberCount owl:topDataProperty)
+DataPropertyDomain(:hasMemberCount :City)
+DataPropertyDomain(:hasMemberCount :Event)
+DataPropertyDomain(:hasMemberCount :Group)
+DataPropertyDomain(:hasMemberCount :Topic)
+DataPropertyRange(:hasMemberCount xsd:integer)
+
+# Data Property: :hasMemberID (:hasMemberID)
+
+SubDataPropertyOf(:hasMemberID :hasID)
+DataPropertyDomain(:hasMemberID :Organiser)
+DataPropertyRange(:hasMemberID xsd:long)
+
+# Data Property: :hasName (:hasName)
+
+DataPropertyDomain(:hasName :Categories)
+DataPropertyDomain(:hasName :City)
+DataPropertyDomain(:hasName :Event)
+DataPropertyDomain(:hasName :Group)
+DataPropertyDomain(:hasName :Members)
+DataPropertyDomain(:hasName :Organiser)
+DataPropertyDomain(:hasName :Topic)
+DataPropertyDomain(:hasName :Venue)
+DataPropertyRange(:hasName xsd:Name)
+
+# Data Property: :hasPhoneNo (:hasPhoneNo)
+
+DataPropertyDomain(:hasPhoneNo :Venue)
+DataPropertyRange(:hasPhoneNo xsd:unsignedLong)
+
+# Data Property: :hasPhotoID (:hasPhotoID)
+
+SubDataPropertyOf(:hasPhotoID :hasID)
+DataPropertyDomain(:hasPhotoID :GroupPhoto)
+DataPropertyRange(:hasPhotoID xsd:long)
+
+# Data Property: :hasPhotoLink (:hasPhotoLink)
+
+SubDataPropertyOf(:hasPhotoLink :hasLink)
+
+# Data Property: :hasPhotoURL (:hasPhotoURL)
+
+SubDataPropertyOf(:hasPhotoURL :hasURL)
+DataPropertyDomain(:hasPhotoURL :Event)
+DataPropertyRange(:hasPhotoURL xsd:anyURI)
+
+# Data Property: :hasRSVPCount (:hasRSVPCount)
+
+DataPropertyDomain(:hasRSVPCount :Event)
+DataPropertyRange(:hasRSVPCount xsd:integer)
+
+# Data Property: :hasRSVPLimit (:hasRSVPLimit)
+
+DataPropertyDomain(:hasRSVPLimit :Event)
+DataPropertyRange(:hasRSVPLimit xsd:integer)
+
+# Data Property: :hasRanking (:hasRanking)
+
+DataPropertyDomain(:hasRanking :City)
+DataPropertyRange(:hasRanking xsd:integer)
+
+# Data Property: :hasStatus (:hasStatus)
+
+DataPropertyDomain(:hasStatus :Event)
+DataPropertyDomain(:hasStatus :Members)
+DataPropertyRange(:hasStatus rdfs:Literal)
+
+# Data Property: :hasThumbLink (:hasThumbLink)
+
+SubDataPropertyOf(:hasThumbLink :hasLink)
+
+# Data Property: :hasTimeZone (:hasTimeZone)
+
+DataPropertyDomain(:hasTimeZone :Group)
+DataPropertyRange(:hasTimeZone rdfs:Literal)
+
+# Data Property: :hasType (:hasType)
+
+DataPropertyDomain(:hasType :GroupPhoto)
+DataPropertyRange(:hasType rdfs:Literal)
+
+# Data Property: :hasURL (:hasURL)
+
+DataPropertyDomain(:hasURL :Event)
+DataPropertyDomain(:hasURL :Group)
+DataPropertyDomain(:hasURL :GroupPhoto)
+DataPropertyDomain(:hasURL :Members)
+DataPropertyDomain(:hasURL :Topic)
+DataPropertyRange(:hasURL xsd:anyURI)
+
+# Data Property: :hasURLName (:hasURLName)
+
+DataPropertyDomain(:hasURLName :Group)
+DataPropertyDomain(:hasURLName :Topic)
+DataPropertyRange(:hasURLName rdfs:Literal)
+
+# Data Property: :hasUTCOffset (:hasUTCOffset)
+
+DataPropertyDomain(:hasUTCOffset :Event)
+DataPropertyDomain(:hasUTCOffset :Group)
+DataPropertyRange(:hasUTCOffset xsd:integer)
+
+# Data Property: :hasVisibility (:hasVisibility)
+
+DataPropertyDomain(:hasVisibility :Event)
+DataPropertyDomain(:hasVisibility :Group)
+DataPropertyRange(:hasVisibility DataOneOf("members" "private" "public" "public_limited"))
+
+# Data Property: :hasYESRSVPCount (:hasYESRSVPCount)
+
+SubDataPropertyOf(:hasYESRSVPCount :hasRSVPCount)
+DataPropertyDomain(:hasYESRSVPCount :Event)
+DataPropertyRange(:hasYESRSVPCount xsd:integer)
+
+# Data Property: :hasZipCode (:hasZipCode)
+
+DataPropertyDomain(:hasZipCode :City)
+DataPropertyRange(:hasZipCode xsd:unsignedLong)
+
+# Data Property: :howToFindUs (:howToFindUs)
+
+DataPropertyDomain(:howToFindUs :Event)
+DataPropertyRange(:howToFindUs rdfs:Literal)
+
+# Data Property: :inState (:inState)
+
+DataPropertyDomain(:inState :City)
+DataPropertyDomain(:inState :Group)
+DataPropertyDomain(:inState :Members)
+DataPropertyRange(:inState rdfs:Literal)
+
+# Data Property: :isRepinned (:isRepinned)
+
+DataPropertyDomain(:isRepinned :Venue)
+DataPropertyRange(:isRepinned DataOneOf("0"^^xsd:integer "1"^^xsd:integer))
+
+# Data Property: :isRequired (:isRequired)
+
+DataPropertyDomain(:isRequired :Fee)
+DataPropertyRange(:isRequired xsd:integer)
+
+# Data Property: :isUpdatedTo (:isUpdatedTo)
+
+DataPropertyDomain(:isUpdatedTo :Event)
+DataPropertyRange(:isUpdatedTo xsd:dateTime)
+
+# Data Property: :joinedOn (:joinedOn)
+
+DataPropertyDomain(:joinedOn :Members)
+DataPropertyRange(:joinedOn xsd:dateTime)
+
+# Data Property: :visitedOn (:visitedOn)
+
+DataPropertyDomain(:visitedOn :Members)
+DataPropertyRange(:visitedOn xsd:dateTime)
+
+# Data Property: :whoCallsMemberHeadcount (:whoCallsMemberHeadcount)
+
+DataPropertyDomain(:whoCallsMemberHeadcount :Group)
+DataPropertyRange(:whoCallsMemberHeadcount rdfs:Literal)
+
+# Data Property: :whyHappenning (:whyHappenning)
+
+DataPropertyDomain(:whyHappenning :Event)
+DataPropertyRange(:whyHappenning DataOneOf("not_found"))
+
+
+
+############################
+#   Classes
+############################
+
+# Class: :Animals (:Animals)
+
+SubClassOf(:Animals :Categories)
+DisjointClasses(:Animals :Arts)
+DisjointClasses(:Animals :AutoMobiles)
+DisjointClasses(:Animals :Business)
+DisjointClasses(:Animals :Community)
+DisjointClasses(:Animals :Education)
+DisjointClasses(:Animals :Family)
+DisjointClasses(:Animals :Fashion)
+DisjointClasses(:Animals :Health)
+DisjointClasses(:Animals :Language)
+DisjointClasses(:Animals :Movements)
+DisjointClasses(:Animals :Recreation)
+DisjointClasses(:Animals :Singles)
+DisjointClasses(:Animals :Support)
+DisjointClasses(:Animals :Technology)
+DisjointClasses(:Animals <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Arts (:Arts)
+
+SubClassOf(:Arts :Categories)
+DisjointClasses(:Arts :AutoMobiles)
+DisjointClasses(:Arts :Business)
+DisjointClasses(:Arts :Community)
+DisjointClasses(:Arts :Education)
+DisjointClasses(:Arts :Family)
+DisjointClasses(:Arts :Fashion)
+DisjointClasses(:Arts :Health)
+DisjointClasses(:Arts :Language)
+DisjointClasses(:Arts :Movements)
+DisjointClasses(:Arts :Recreation)
+DisjointClasses(:Arts :Singles)
+DisjointClasses(:Arts :Support)
+DisjointClasses(:Arts :Technology)
+DisjointClasses(:Arts <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :AutoMobiles (:AutoMobiles)
+
+SubClassOf(:AutoMobiles :Categories)
+DisjointClasses(:AutoMobiles :Business)
+DisjointClasses(:AutoMobiles :Community)
+DisjointClasses(:AutoMobiles :Education)
+DisjointClasses(:AutoMobiles :Family)
+DisjointClasses(:AutoMobiles :Fashion)
+DisjointClasses(:AutoMobiles :Health)
+DisjointClasses(:AutoMobiles :Language)
+DisjointClasses(:AutoMobiles :Movements)
+DisjointClasses(:AutoMobiles :Recreation)
+DisjointClasses(:AutoMobiles :Singles)
+DisjointClasses(:AutoMobiles :Support)
+DisjointClasses(:AutoMobiles :Technology)
+DisjointClasses(:AutoMobiles <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :BookClub (:BookClub)
+
+SubClassOf(:BookClub :Community)
+DisjointClasses(:BookClub :LGBT)
+
+# Class: :Business (:Business)
+
+SubClassOf(:Business :Categories)
+DisjointClasses(:Business :Community)
+DisjointClasses(:Business :Education)
+DisjointClasses(:Business :Family)
+DisjointClasses(:Business :Fashion)
+DisjointClasses(:Business :Health)
+DisjointClasses(:Business :Language)
+DisjointClasses(:Business :Movements)
+DisjointClasses(:Business :Recreation)
+DisjointClasses(:Business :Singles)
+DisjointClasses(:Business :Support)
+DisjointClasses(:Business :Technology)
+DisjointClasses(:Business <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Community (:Community)
+
+SubClassOf(:Community :Categories)
+DisjointClasses(:Community :Education)
+DisjointClasses(:Community :Family)
+DisjointClasses(:Community :Fashion)
+DisjointClasses(:Community :Health)
+DisjointClasses(:Community :Language)
+DisjointClasses(:Community :Movements)
+DisjointClasses(:Community :Recreation)
+DisjointClasses(:Community :Singles)
+DisjointClasses(:Community :Support)
+DisjointClasses(:Community :Technology)
+DisjointClasses(:Community <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Crafts (:Crafts)
+
+SubClassOf(:Crafts :Arts)
+DisjointClasses(:Crafts :Dance)
+DisjointClasses(:Crafts :Music)
+DisjointClasses(:Crafts :Photography)
+DisjointClasses(:Crafts :Writing)
+
+# Class: :Dance (:Dance)
+
+SubClassOf(:Dance :Arts)
+DisjointClasses(:Dance :Music)
+DisjointClasses(:Dance :Photography)
+DisjointClasses(:Dance :Writing)
+
+# Class: :Education (:Education)
+
+SubClassOf(:Education :Categories)
+DisjointClasses(:Education :Family)
+DisjointClasses(:Education :Fashion)
+DisjointClasses(:Education :Health)
+DisjointClasses(:Education :Language)
+DisjointClasses(:Education :Movements)
+DisjointClasses(:Education :Recreation)
+DisjointClasses(:Education :Singles)
+DisjointClasses(:Education :Support)
+DisjointClasses(:Education :Technology)
+DisjointClasses(:Education <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :FItness (:FItness)
+
+SubClassOf(:FItness :Health)
+DisjointClasses(:FItness :LIfestyle)
+DisjointClasses(:FItness :WellBeing)
+DisjointClasses(:FItness <http://www.iiitd.ac.in/meetups#Food&Drink>)
+
+# Class: :Family (:Family)
+
+SubClassOf(:Family :Categories)
+DisjointClasses(:Family :Fashion)
+DisjointClasses(:Family :Health)
+DisjointClasses(:Family :Language)
+DisjointClasses(:Family :Movements)
+DisjointClasses(:Family :Recreation)
+DisjointClasses(:Family :Singles)
+DisjointClasses(:Family :Support)
+DisjointClasses(:Family :Technology)
+DisjointClasses(:Family <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Fashion (:Fashion)
+
+SubClassOf(:Fashion :Categories)
+DisjointClasses(:Fashion :Health)
+DisjointClasses(:Fashion :Language)
+DisjointClasses(:Fashion :Movements)
+DisjointClasses(:Fashion :Recreation)
+DisjointClasses(:Fashion :Singles)
+DisjointClasses(:Fashion :Support)
+DisjointClasses(:Fashion :Technology)
+DisjointClasses(:Fashion <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Films (:Films)
+
+SubClassOf(:Films :Recreation)
+DisjointClasses(:Films :Games)
+DisjointClasses(:Films :Outdoors)
+DisjointClasses(:Films :Sports)
+
+# Class: :Games (:Games)
+
+SubClassOf(:Games :Recreation)
+DisjointClasses(:Games :Outdoors)
+DisjointClasses(:Games :Sports)
+
+# Class: :Health (:Health)
+
+SubClassOf(:Health :Categories)
+DisjointClasses(:Health :Language)
+DisjointClasses(:Health :Movements)
+DisjointClasses(:Health :Recreation)
+DisjointClasses(:Health :Singles)
+DisjointClasses(:Health :Support)
+DisjointClasses(:Health :Technology)
+DisjointClasses(:Health <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :LGBT (:LGBT)
+
+SubClassOf(:LGBT :Community)
+
+# Class: :LIfestyle (:LIfestyle)
+
+SubClassOf(:LIfestyle :Health)
+DisjointClasses(:LIfestyle :WellBeing)
+DisjointClasses(:LIfestyle <http://www.iiitd.ac.in/meetups#Food&Drink>)
+
+# Class: :Language (:Language)
+
+SubClassOf(:Language :Categories)
+DisjointClasses(:Language :Movements)
+DisjointClasses(:Language :Recreation)
+DisjointClasses(:Language :Singles)
+DisjointClasses(:Language :Support)
+DisjointClasses(:Language :Technology)
+DisjointClasses(:Language <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Movements (:Movements)
+
+SubClassOf(:Movements :Categories)
+DisjointClasses(:Movements :Recreation)
+DisjointClasses(:Movements :Singles)
+DisjointClasses(:Movements :Support)
+DisjointClasses(:Movements :Technology)
+DisjointClasses(:Movements <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Music (:Music)
+
+SubClassOf(:Music :Arts)
+DisjointClasses(:Music :Photography)
+DisjointClasses(:Music :Writing)
+
+# Class: :Organiser (:Organiser)
+
+SubClassOf(:Organiser :Agent)
+
+# Class: :Organizing (:Organizing)
+
+SubClassOf(:Organizing :AgentRole)
+
+# Class: :Outdoors (:Outdoors)
+
+SubClassOf(:Outdoors :Recreation)
+DisjointClasses(:Outdoors :Sports)
+
+# Class: :Pets (:Pets)
+
+SubClassOf(:Pets :Animals)
+
+# Class: :Photography (:Photography)
+
+SubClassOf(:Photography :Arts)
+DisjointClasses(:Photography :Writing)
+
+# Class: :Recreation (:Recreation)
+
+SubClassOf(:Recreation :Categories)
+DisjointClasses(:Recreation :Singles)
+DisjointClasses(:Recreation :Support)
+DisjointClasses(:Recreation :Technology)
+DisjointClasses(:Recreation <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Singles (:Singles)
+
+SubClassOf(:Singles :Categories)
+DisjointClasses(:Singles :Support)
+DisjointClasses(:Singles :Technology)
+DisjointClasses(:Singles <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Sports (:Sports)
+
+SubClassOf(:Sports :Recreation)
+
+# Class: :Support (:Support)
+
+SubClassOf(:Support :Categories)
+DisjointClasses(:Support :Technology)
+DisjointClasses(:Support <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :Technology (:Technology)
+
+SubClassOf(:Technology :Categories)
+DisjointClasses(:Technology <http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+# Class: :WellBeing (:WellBeing)
+
+SubClassOf(:WellBeing :Health)
+DisjointClasses(:WellBeing <http://www.iiitd.ac.in/meetups#Food&Drink>)
+
+# Class: :Writing (:Writing)
+
+SubClassOf(:Writing :Arts)
+
+# Class: <http://www.iiitd.ac.in/meetups#Food&Drink> (<http://www.iiitd.ac.in/meetups#Food&Drink>)
+
+SubClassOf(<http://www.iiitd.ac.in/meetups#Food&Drink> :Health)
+
+# Class: <http://www.iiitd.ac.in/meetups#Moms&Dads> (<http://www.iiitd.ac.in/meetups#Moms&Dads>)
+
+SubClassOf(<http://www.iiitd.ac.in/meetups#Moms&Dads> :Family)
+
+# Class: <http://www.iiitd.ac.in/meetups#SciFi&Fantasy> (<http://www.iiitd.ac.in/meetups#SciFi&Fantasy>)
+
+SubClassOf(<http://www.iiitd.ac.in/meetups#SciFi&Fantasy> :Categories)
+
+
+)

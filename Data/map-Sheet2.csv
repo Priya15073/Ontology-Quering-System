@@ -1,0 +1,48 @@
+Class,Group,,,
+Class,Category,,,
+Class,City,,,
+Class,Organizer,,,
+Class,Photo,,,
+Class,URL,,,
+SubClass,GroupPhoto,Photo,,
+SubClass,BaseURL,URL,,
+SubClass,HighResURL,URL,,
+SubClass,ThumbURL,URL,,
+Data Property,hasGroupID,Group,1,xsd:unsignedLong
+Data Property,hasCategoryID,Category,2,xsd:unsignedLong
+Data Property,hasCategoryName,Category,3,rdfs:Literal
+Data Property,hasCategoryShortName,Category,4,rdfs:Literal
+Data Property,hasCityID,City,5,xsd:unsignedLong
+Data Property,hasCityName,City,6,rdfs:Literal
+Data Property,hasCountry,City,7,rdfs:Literal
+Data Property,createdOn,Group,8,xsd:dateTime
+Data Property,hasDescription,Group,9,rdfs:Literal
+Data Property,hasBaseURLink,BaseURL,10,xsd:anyURI
+Data Property,hasHighResURLink,HighResURL,11,xsd:anyURI
+Data Property,hasGroupPhotoID,GroupPhoto,12,xsd:unsignedLong
+Data Property,hasPhotoURLink,PhotoURL,13,xsd:anyURI
+Data Property,hasThumbURLink,ThumbURL,14,xsd:anyURI
+Data Property,hasGroupPhotoType,GroupPhoto,15,rdfs:Literal
+Data Property,hasJoinMode,Group,16,rdfs:Literal
+Data Property,hasURL,Group,17,xsd:anyURI
+Data Property,hasMemberCount,Group,18,xsd:int
+Data Property,hasGroupName,Group,19,rdfs:Literal
+Data Property,hasMemberID,Organizer,20,xsd:unsignedLong
+Data Property,hasOrganizerName,Organizer,21,rdfs:Literal
+Data Property,hasRating,Group,22,xsd:double
+Data Property,hasState,City,23,rdfs:Literal
+Data Property,hasLatitude,Group,24,xsd:float
+Data Property,hasLongitude,Group,25,xsd:float
+Data Property,hasURLName,Group,26,rdfs:Literal
+Data Property,hasVisibility,Group,27,rdfs:Literal
+Data Property,hasTimeZone,Group,28,rdfs:Literal
+Data Property,hasUTCOffset,Group,29,xsd:integer
+Data Property,who,Group,30,rdfs:Literal
+Object Property,hasCity,Group,City,
+Object Property,hasCategory,Group,Category,
+Object Property,hasGroupPhoto,Group,GroupPhoto,
+Object Property,hasOrganizer,Group,Organizer,
+Object Property,hasBaseURL,GroupPhoto,BaseURL,
+Object Property,hasHighResURL,GroupPhoto,HighResURL,
+Object Property,hasThumbURL,GroupPhoto,ThumbURL,
+Object Property,hasPhotoURL,GroupPhoto,PhotoURL,

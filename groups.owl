@@ -1,0 +1,474 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="urn:absolute:www.iiitd.ac.in/meetupgroups#"
+     xml:base="urn:absolute:www.iiitd.ac.in/meetupgroups"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups">
+        <owl:versionIRI rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasBaseURL -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasBaseURL">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#GroupPhoto"/>
+        <rdfs:range rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#BaseURL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasCategory -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasCategory">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Category"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasCity -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasCity">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#City"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupPhoto -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupPhoto">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#GroupPhoto"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasHighResURL -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasHighResURL">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Photo"/>
+        <rdfs:range rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#HighResURL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasOrganizer -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasOrganizer">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Organizer"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasPhotoURL -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasPhotoURL">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#GroupPhoto"/>
+        <rdfs:range rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#PhotoURL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasThumbURL -->
+
+    <owl:ObjectProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasThumbURL">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#GroupPhoto"/>
+        <rdfs:range rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#ThumbURL"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#createdOn -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#createdOn">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasBaseURLink -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasBaseURLink">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#BaseURL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasCategoryID -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasCategoryID">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasCategoryName -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasCategoryName">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasCategoryShortName -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasCategoryShortName">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Category"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasCityID -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasCityID">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasCityName -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasCityName">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasCountry -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasCountry">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasDescription -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasDescription">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupID -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupID">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupName -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupName">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupPhotoID -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupPhotoID">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#GroupPhoto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupPhotoType -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasGroupPhotoType">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#GroupPhoto"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasHighResURLink -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasHighResURLink">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#HighResURL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasJoinMode -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasJoinMode">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasLatitude -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasLatitude">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasLongitude -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasLongitude">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasMemberCount -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasMemberCount">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasMemberID -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasMemberID">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Organizer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#unsignedLong"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasOrganiserName -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasOrganiserName">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Organizer"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasPhotoURLink -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasPhotoURLink">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#PhotoURL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasRating -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasRating">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#double"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasState -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasState">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#City"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasThumbURLink -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasThumbURLink">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#ThumbURL"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasTimeZone -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasTimeZone">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasURL -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasURL">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#anyURI"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasURLName -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasURLName">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasUTCOffset -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasUTCOffset">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#hasVisibility -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#hasVisibility">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#who -->
+
+    <owl:DatatypeProperty rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#who">
+        <rdfs:domain rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#BaseURL -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#BaseURL">
+        <rdfs:subClassOf rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#URL"/>
+        <owl:disjointWith rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#HighResURL"/>
+        <owl:disjointWith rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#PhotoURL"/>
+        <owl:disjointWith rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#ThumbURL"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#Category -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#Category"/>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#City -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#City"/>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#Group -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#Group"/>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#GroupPhoto -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#GroupPhoto">
+        <rdfs:subClassOf rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#Photo"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#HighResURL -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#HighResURL">
+        <rdfs:subClassOf rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#URL"/>
+        <owl:disjointWith rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#PhotoURL"/>
+        <owl:disjointWith rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#ThumbURL"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#Organizer -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#Organizer"/>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#Photo -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#Photo"/>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#PhotoURL -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#PhotoURL">
+        <rdfs:subClassOf rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#URL"/>
+        <owl:disjointWith rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#ThumbURL"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#ThumbURL -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#ThumbURL">
+        <rdfs:subClassOf rdf:resource="urn:absolute:www.iiitd.ac.in/meetupgroups#URL"/>
+    </owl:Class>
+    
+
+
+    <!-- urn:absolute:www.iiitd.ac.in/meetupgroups#URL -->
+
+    <owl:Class rdf:about="urn:absolute:www.iiitd.ac.in/meetupgroups#URL"/>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+

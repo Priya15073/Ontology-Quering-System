@@ -1,0 +1,20 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix meet: <http://www.iiitd.ac.in/meetupgroups#>.
+
+meet:MyShape
+	a sh:NodeShape;
+	sh:targetNode meet:Group_1;
+	sh:property[
+		sh:path meet:hasGroupName;
+		sh:maxCount 1;
+		sh:datatype rdfs:Literal;
+		sh:severity sh:Warning;
+	];
+	sh:property[
+		sh:path meet:hasCategory;
+		sh:class meet:Category;
+		sh:nodeKind sh:IRI;
+		sh:severity sh:Info
+	].
+	

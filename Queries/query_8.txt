@@ -1,0 +1,8 @@
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX meet: <http://www.iiitd.ac.in/meetupgroups#>
+SELECT *
+{
+  ?s meet:hasBaseURL/rdf:type ?o.
+}
+LIMIT 100

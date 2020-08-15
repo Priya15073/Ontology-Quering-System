@@ -1,0 +1,20 @@
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#>.
+@prefix sh: <http://www.w3.org/ns/shacl#>.
+@prefix meet: <http://www.iiitd.ac.in/meetupgroups#>.
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>.
+
+meet:MyShape2
+	a sh:NodeShape;	
+	sh:targetNode meet:Group_1;	
+	sh:property[
+		sh:path meet:hasTimeZone;
+		sh:datatype rdfs:Literal;
+		sh:pattern “^US”^^rdfs:Literal;
+	
+	].
+	
+
+
+
+
+
